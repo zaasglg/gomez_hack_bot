@@ -3,7 +3,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, WebAppI
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)=bMM-KxtIQEr
 
 WEBAPP_URL = "https://chicken.valor-games.co/hack/chicken_index.php"
 
@@ -18,9 +18,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "Si no te aparece el botón 'Abrir', pulsa el botón 'Abrir mini-app'",
+        "Si no te aparece el botón '<b>Abrir</b>', pulsa el botón '<b>Abrir mini-app</b>'",
         reply_markup=reply_markup,
+        parse_mode="HTML"
     )
+
 
 def main() -> None:
     application = Application.builder().token("8324004755:AAH47s9zHWXmLuP2W7DdSNRJLtCA3bqmbKo").build()
